@@ -28,6 +28,9 @@ To do list:
         padding-left: 10px;
 
     }
+    a {
+        color: red;
+    }
 </style>
 
     <header>
@@ -62,15 +65,15 @@ To do list:
 
     <div class="score-link-div">
         <ul>
-            <a class="score-link" href="javascript: load_score(this, '6885884')"><li>La corde sensible</li></a>
-            <a class="score-link" href="javascript: load_score(this, '6822939')"><li>Beagle</li></a>
-            <a class="score-link" href="javascript: load_score(this, '6810040')"><li>Ragspace</li></a>
-            <a class="score-link" href="javascript: load_score(this, '6794318')"><li>In the corridors of the dark castle</li></a>
-            <a class="score-link" href="javascript: load_score(this, '6792955')"><li>Shigaraki</li></a>
-            <a class="score-link" href="javascript: load_score(this, '6792947')"><li>Hongōdai</li></a>
-            <a class="score-link" href="javascript: load_score(this, '6792775')"><li>Sunset on the beach of Kamakura</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6885884')"><li>La corde sensible</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6822939')"><li>Beagle</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6810040')"><li>Ragspace</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6794318')"><li>In the corridors of the dark castle</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6792955')"><li>Shigaraki</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6792947')"><li>Hongōdai</li></a>
+            <a class="score-link" href="javascript:load_score(this, '6792775')"><li>Sunset on the beach of Kamakura</li></a>
             
-            <a href="https://musescore.com/user/38763498" style=
+            <a id="test" href="https://musescore.com/user/38763498" style=
             "font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
             font-size: 12px;"
             >Follow me on Musescore</a>
@@ -82,12 +85,29 @@ To do list:
 </body>
 
 <script>
+    links = document.getElementsByClassName("score-link");
+    for (var i=0; i<links.length; i++) {
+        links[i].onclick = function () {
+            
+            reset_links_style();
+            this.style.backgroundColor = "rgba(220,220,220)";
+        };
+    }
+
+    function reset_links_style() {
+        links = document.getElementsByClassName("score-link");
+        for (var i=0; i<links.length; i++)  {
+            links[i].style.backgroundColor = "unset";
+        }
+    }
+
+    
 
     function load_score(link, id) {
         score_player = document.getElementById("score_player");
         score_player.src = "https://musescore.com/user/38763498/scores/" + id + "/embed";
-        link.color = black;
     }
+    
 
 
 </script>
