@@ -1,17 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        <link href="styles/style.css" rel="stylesheet">
-        <title>My music website</title>
-    </head>
-    <body>
-        <h1>Here's a website for my music</h1>
-        <p>
-            Lorem ipsum
-        </p>
 
-    </body>
+<!-- 
+To do list:
+    - make the score resizable
+    - style the score list
+    - style the page
+    - add a bordereau
+    
+ -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>My music website</title>
+</head>
+
+<body>
+<style>
+    header {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        background-color: rgb(49, 49, 49);
+        /* background: no-repeat left/cover url("./images/header.png"); */
+        padding-left: 10px;
+
+    }
+</style>
+
+    <header>
+        <h1 style="color:white"> Arthur's music</h1>
+        <!-- <image src="/images/felicia-buitenwerf-kGLYLMVs83g-unsplash.jpg"></image> -->
+    </header>
+    
+    
+
+    <h2>Produced music</h2>
+    
+    <iframe width="100%" height="350" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1326050344&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false"></iframe>    
+
+
+    <hr width=0px>
+    <h2>Scores</h2>
+
+    
+    
+
+
+    
+    <iframe id="score_player"
+            width="100%" 
+            height="500" 
+            src="https://musescore.com/user/38763498/scores/6885884/embed" 
+            frameborder="0px"
+            allowfullscreen allow="autoplay; fullscreen"
+        ></iframe>
+    
+
+    <div class="score-link-div">
+        <ul>
+            <a class="score-link" href="javascript: load_score(this, '6885884')"><li>La corde sensible</li></a>
+            <a class="score-link" href="javascript: load_score(this, '6822939')"><li>Beagle</li></a>
+            <a class="score-link" href="javascript: load_score(this, '6810040')"><li>Ragspace</li></a>
+            <a class="score-link" href="javascript: load_score(this, '6794318')"><li>In the corridors of the dark castle</li></a>
+            <a class="score-link" href="javascript: load_score(this, '6792955')"><li>Shigaraki</li></a>
+            <a class="score-link" href="javascript: load_score(this, '6792947')"><li>Hongōdai</li></a>
+            <a class="score-link" href="javascript: load_score(this, '6792775')"><li>Sunset on the beach of Kamakura</li></a>
+            
+            <a href="https://musescore.com/user/38763498" style=
+            "font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+            font-size: 12px;"
+            >Follow me on Musescore</a>
+        </ul>
+        
+    </div>
+
+
+</body>
+
+<script>
+
+    function load_score(link, id) {
+        score_player = document.getElementById("score_player");
+        score_player.src = "https://musescore.com/user/38763498/scores/" + id + "/embed";
+        link.color = black;
+    }
+
+
+</script>
 
 </html>

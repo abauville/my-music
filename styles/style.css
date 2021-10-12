@@ -1,0 +1,47 @@
+html {
+    background-color: white;
+    font-family: Futura, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+}
+
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0px 20px 20px 20px;
+    background-color: white;
+}
+
+
+
+ul {
+    background: rgba(255,255,255);
+    padding-left: 20px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    color: grey;
+    list-style-type: "▶";
+    border: solid 1px rgba(0, 0, 0, 0.199);
+    
+}
+
+.score-link {
+    
+    display: block;
+    height: 20px;
+    
+    margin-left: -20px;
+    padding-top: 5px;
+    
+    padding-left: 35px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.199);
+    text-decoration: none;
+    color: black;
+
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 12px;
+}
+
+li {
+    padding-left:10px
+}
+
